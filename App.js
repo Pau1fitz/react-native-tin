@@ -9,6 +9,8 @@ import {
 import SwipeCard from './components/SwipeCard';
 import BottomMenu from './components/BottomMenu';
 import styled from 'styled-components';
+import TopMenu from './components/TopMenu';
+import { LinearGradient } from 'expo';
 
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -154,14 +156,19 @@ export default class App extends Component {
 
   render() {
     return (
-      <Container>
-        <Header />
-        <Section>
-          {this.renderUsers()}
-        </Section>
-        <BottomMenu />
-        <Footer />
-      </Container>
+      <LinearGradient
+        colors={['#fff', 'rgb(247,247,247)', 'rgb(244,244,244)']}
+        style={{ flex: 1 }}>
+        <Container>
+          <Header />
+            <TopMenu />
+            <Section>
+              {this.renderUsers()}
+            </Section>
+            <BottomMenu />
+          <Footer />
+        </Container>
+      </LinearGradient>
     );
   }
 }
@@ -175,8 +182,7 @@ const Section = styled.View`
   display: flex;
 `
 const Header = styled.View`
-  height: 180px;
-  border: 1px solid orange;
+  height: 60px;
 `
 const Footer = styled.View`
   height: 60px;

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Text, View, TouchableHighlight } from 'react-native';
 import styled from 'styled-components';
-import { Ionicons, FontAwesome } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 const Button = ({name, color, size, buttonType}) => {
 
   return buttonType === 'large' ?
-
    (
     <LargeButtonContainer>
       <TouchableHighlight>

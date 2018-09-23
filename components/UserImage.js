@@ -18,7 +18,7 @@ const UserImage = ({ name }) => {
 
 const MainImage = styled.Image`
   width: 100%;
-  height: 400px;
+  height: 500px;
   margin-bottom: 10px;
 `
 
