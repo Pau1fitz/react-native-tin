@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Image, Text } from 'react-native';
 import styled from 'styled-components';
 
-const UserImage = () => {
+const userImages = {
+  'andrea': require('../images/Andrea.png'),
+  'chuck': require('../images/Chuck.jpeg'),
+  'dane': require('../images/Dane.jpg')
+}
+
+const UserImage = ({ name }) => {
+
+  const userImage = userImages[name]
   return (
-    <MainImage source={require('../images/Andrea.png')} />
+    <MainImage source={userImage} />
   )
 }
 
 const MainImage = styled.Image`
-  width: 276px;
-  height: 369px;
+  width: 100%;
+  height: 400px;
 `
 
 export default UserImage;
