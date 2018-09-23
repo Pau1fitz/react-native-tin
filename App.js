@@ -7,6 +7,7 @@ import {
   Animated
 } from 'react-native';
 import Card from './components/Card';
+import BottomMenu from './components/BottomMenu';
 import styled from 'styled-components';
 
 const SCREEN_HEIGHT = Dimensions.get('window').height;
@@ -118,11 +119,11 @@ export default class App extends Component {
             ]}
           >
             <Animated.View style={{ opacity: this.likeOpacity, transform: [{'rotate': '-30deg'}], position: 'absolute', zIndex: 1000, top: 50, left: 40}}>
-              <Text style={{color: 'green', borderWidth: 1, borderColor: 'green', padding: 10, fontSize: 32, fontWeight: '800'}}>LIKE</Text>
+              <Text style={{color: 'rgb(56, 202, 120)', borderWidth: 4, borderColor: 'rgb(56,202,120)', padding: 10, fontSize: 34, fontWeight: '800'}}>LIKE</Text>
             </Animated.View>
 
             <Animated.View style={{ opacity: this.dislikeOpacity, transform: [{'rotate': '30deg'}], position: 'absolute', zIndex: 1000, top: 50, right: 40}}>
-              <Text style={{color: 'red', borderWidth: 1, borderColor: 'red', padding: 10, fontSize: 32, fontWeight: '800'}}>NOPE</Text>
+              <Text style={{color: 'rgb(254,80,104)', borderWidth: 4, borderColor: 'rgb(254,80,104)', padding: 10, fontSize: 34, fontWeight: '800'}}>NOPE</Text>
             </Animated.View>
 
             <Card user={user}  />
@@ -155,7 +156,10 @@ export default class App extends Component {
     return (
       <Container>
         <Header />
-        {this.renderUsers()}
+        <Section>
+          {this.renderUsers()}
+        </Section>
+        <BottomMenu />
         <Footer />
       </Container>
     );
@@ -164,12 +168,17 @@ export default class App extends Component {
 
 const Container = styled.View`
   flex: 1;
-  align-items: center;
-  justify-content: center;
+`
+const Section = styled.View`
+  flex: 1;
+  align-items:center;
+  display: flex;
 `
 const Header = styled.View`
-  height: 60px;
+  height: 180px;
+  border: 1px solid orange;
 `
 const Footer = styled.View`
   height: 60px;
+  border: 1px solid orange;
 `

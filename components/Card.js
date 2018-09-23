@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import UserImage from './UserImage';
 import AppText from './AppText';
 
-
-
 const Card = ({user}) => {
 
   return (
@@ -14,12 +12,12 @@ const Card = ({user}) => {
       <AppText 
         text={`${user.name}, ${user.age}`} 
         color={'#000'}
-        size={'16px'}
+        size={'20px'}
       />
       <AppText 
         text={'Friends with Emily Albert'} 
         color={'#aaa'}
-        size={'14px'}
+        size={'16px'}
       />
     </CardContainer>
   )
@@ -27,7 +25,7 @@ const Card = ({user}) => {
 
 const CardContainer = styled.View`
   background: #fff;
-  border-radius: 2px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   padding: 0 10px 10px 10px;
   shadow-opacity: 0.2;
