@@ -6,7 +6,7 @@ import {
   PanResponder,
   Animated
 } from 'react-native';
-import Card from './components/Card';
+import SwipeCard from './components/SwipeCard';
 import BottomMenu from './components/BottomMenu';
 import styled from 'styled-components';
 
@@ -126,7 +126,7 @@ export default class App extends Component {
               <Text style={{color: 'rgb(254,80,104)', borderWidth: 4, borderColor: 'rgb(254,80,104)', padding: 10, fontSize: 34, fontWeight: '800'}}>NOPE</Text>
             </Animated.View>
 
-            <Card user={user}  />
+            <SwipeCard user={user}  />
           </Animated.View>
         )
       } else {
@@ -143,7 +143,7 @@ export default class App extends Component {
               }
             ]}
           >
-          <Card 
+          <SwipeCard 
             user={user} 
           />
         </Animated.View>

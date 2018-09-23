@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import UserImage from './UserImage';
 import AppText from './AppText';
 
-const Card = ({user}) => {
+const SwipeCard = ({user}) => {
 
   return (
-    <CardContainer>
+    <SwipeCardContainer>
       <UserImage name={user.name} />
       <AppText 
         text={`${user.name}, ${user.age}`} 
@@ -19,11 +19,11 @@ const Card = ({user}) => {
         color={'#aaa'}
         size={'16px'}
       />
-    </CardContainer>
+    </SwipeCardContainer>
   )
 }
 
-const CardContainer = styled.View`
+const SwipeCardContainer = styled.View`
   background: #fff;
   border-radius: 10px;
   border: 1px solid #ccc;
@@ -34,5 +34,5 @@ const CardContainer = styled.View`
   shadow-offset: 0px 3px;
 `
 
-export default Card;
+export default SwipeCard;
 
