@@ -6,13 +6,13 @@ import AppText from './AppText';
 
 
 
-const Card = (props) => {
-  console.log(props)
+const Card = ({user}) => {
+
   return (
     <CardContainer>
-      <UserImage name={props.name} />
+      <UserImage name={user.name} />
       <AppText 
-        text={'Emily, 23'} 
+        text={`${user.name}, ${user.age}`} 
         color={'#000'}
         size={'16px'}
       />

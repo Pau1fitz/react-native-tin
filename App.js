@@ -4,8 +4,7 @@ import {
   View,
   Dimensions,
   PanResponder,
-  Animated,
-  Image
+  Animated
 } from 'react-native';
 import Card from './components/Card';
 import styled from 'styled-components';
@@ -13,11 +12,10 @@ import styled from 'styled-components';
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
-
 const Users = [
-  { 'id': 1, 'name': 'andrea'},
-  { 'id': 2, 'name': 'chuck'},
-  { 'id': 3, 'name': 'dane'}
+  { 'id': 1, 'name': 'Andrea', 'age': 23 },
+  { 'id': 2, 'name': 'Chuck', 'age': 31 },
+  { 'id': 3, 'name': 'Dwayne', 'age': 28 }
 ]
  
 export default class App extends Component {
@@ -127,7 +125,7 @@ export default class App extends Component {
               <Text style={{color: 'red', borderWidth: 1, borderColor: 'red', padding: 10, fontSize: 32, fontWeight: '800'}}>NOPE</Text>
             </Animated.View>
 
-            <Card name={user.name} />
+            <Card user={user}  />
           </Animated.View>
         )
       } else {
@@ -144,7 +142,9 @@ export default class App extends Component {
               }
             ]}
           >
-          <Card name={user.name} />
+          <Card 
+            user={user} 
+          />
         </Animated.View>
         )
       }
@@ -167,11 +167,9 @@ const Container = styled.View`
   align-items: center;
   justify-content: center;
 `
-
 const Header = styled.View`
   height: 60px;
 `
-
 const Footer = styled.View`
   height: 60px;
 `
