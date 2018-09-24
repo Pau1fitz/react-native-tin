@@ -4,29 +4,29 @@ import styled from 'styled-components';
 import { FontAwesome } from '@expo/vector-icons';
 import Action from './Action';
 
-const TopMenu = () => {
+const ActionsMenu = () => {
 
   return (
-    <TopMenuContainer>
+    <ActionsMenuContainer>
       <View>
-        <Action size={30} color={'rgb(218,223,230)'} name='user' type={'fa'} />
+        <Action size={32} color={'rgb(218,223,230)'} name='user' type={'fa'} />
       </View>
       <MiddleView>
         <SingleView>
-          <Action size={28} color={'#fff'} name='md-flame' type={'ioc'} />
+          <Action size={26} color={'#fff'} name='md-flame' type={'ioc'} />
         </SingleView>
         <GroupsView>
-          <Action size={22} color={'rgb(218,223,230)'} name='users' type={'fa'} margin={true} />
+          <Action size={20} color={'rgb(218,223,230)'} name='users' type={'fa'} margin={true} />
         </GroupsView>
       </MiddleView>
       <View>
-        <Action size={30} color={'rgb(218,223,230)'} name='ios-chatbubbles' type={'ioc'} />
+        <Action size={32} color={'rgb(218,223,230)'} name='ios-chatbubbles' type={'ioc'} />
       </View>
-    </TopMenuContainer>
+    </ActionsMenuContainer>
   )
 }
 
-const TopMenuContainer = styled.View`
+const ActionsMenuContainer = styled.View`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -58,5 +58,5 @@ const GroupsView = styled.View`
   right: 20px;
   padding-left: 15px;
 `
-export default TopMenu;
+export default ActionsMenu;
 

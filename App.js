@@ -9,7 +9,7 @@ import {
 import SwipeCard from './components/SwipeCard';
 import BottomMenu from './components/BottomMenu';
 import styled from 'styled-components';
-import TopMenu from './components/TopMenu';
+import ActionsMenu from './components/ActionsMenu';
 import { LinearGradient } from 'expo';
 
 const SCREEN_HEIGHT = Dimensions.get('window').height;
@@ -161,7 +161,7 @@ export default class App extends Component {
         style={{ flex: 1 }}>
         <Container>
           <Header />
-            <TopMenu />
+            <ActionsMenu />
             <Section>
               {this.renderUsers()}
             </Section>
